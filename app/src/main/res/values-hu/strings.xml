@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Game of Life</string>
+    <string name="unknown_error">Ismeretlen hiba</string>
+    <string name="generation">%d. generáció</string>
+</resources>

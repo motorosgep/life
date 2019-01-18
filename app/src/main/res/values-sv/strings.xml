@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Game of Life</string>
+    <string name="unknown_error">Okänt fel</string>
+    <string name="generation">%d: e generationen</string>
+</resources>
