@@ -60,16 +60,16 @@ class WorldEvolutionTests {
         }
 
         evolutionTimelineUseCase.execute(worldInput, 0)
-            .test()
-            .assertValueAt(0) { worldResult ->
-                worldIteration.toString() == worldResult.toString()
-            }
+            .elementAt(0)
+            .subscribe({ worldResult -> assert(worldIteration.toString() == worldResult.toString()) },
+                { assert(false) }
+            )
 
         evolutionTimelineUseCase.execute(worldInput, 0)
-            .test()
-            .assertValueAt(0) { worldResult ->
-                worldInput.toString() == worldResult.toString()
-            }
+            .elementAt(1)
+            .subscribe({ worldResult -> assert(worldInput.toString() == worldResult.toString()) },
+                { assert(false) }
+            )
     }
 
 }

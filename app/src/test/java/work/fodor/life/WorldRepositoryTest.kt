@@ -39,7 +39,7 @@ class WorldRepositoryTest {
     }
 
     @Test
-    fun testGetPreset() {
+    fun testGetPresetFunction() {
         val worldExpected = World(5, 5).apply {
             cells[1][2] = true
             cells[2][2] = true
